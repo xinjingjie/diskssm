@@ -1,0 +1,57 @@
+@CHARSET "UTF-8";
+body{
+	margin: 0px auto;
+}
+.box{
+	width: 600px;
+	height: 900px;
+	margin: 0 auto;
+}
+.right{
+	width: 530px;
+	height: 300px;
+	background: #d7d7d7;
+	margin-left:140px;
+	margin-top: -430px;
+	padding-left: 130px;
+	padding-top: 100px;
+}
+
+p{
+	font-size: 30px;
+	text-align: center;
+	padding-top: 20px;
+}
+.admin{
+	height: 30px;
+	width: 800px;
+	background:#3399ff;
+}
+.mulu{
+	margin-top:-13px;
+	font-size: 14px;
+	height: 430px;
+	width: 140px;
+	background-color: gray;
+}
+a{
+	color: #000000;
+	text-decoration: none;
+}
+ul.nav{
+	list-style-type: none;
+	margin-left: -40px;
+}
+.nav li a {
+	display: block;
+	text-indent: 20px;
+	height: 30px;
+	line-height: 30px;
+	width: 140px;
+	align:center;
+}
+
+.nav li a:hover{
+	background-color: blue;
+	color:#fff;
+}

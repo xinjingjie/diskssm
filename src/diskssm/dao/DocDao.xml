@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="diskssm.dao.DocDao" >
+
+  <insert id="addDoc" parameterType="doc" >
+    insert into t_doc(filename, savepath,filesize,catalog,filetype,memo,isshare,uploaddate,count,username) 
+    values(#{filename}, #{savepath},#{filesize},#{catalog},#{filetype},#{memo},#{isshare},#{uploaddate},#{count},#{username})
+  </insert>
+  
+  <select id="findById" parameterType="int" resultType="doc" >
+     SELECT * FROM t_doc WHERE id = #{id}
+  </select>
+  
+  <select id="findByUsername" parameterType="String" resultType="doc" >
+     SELECT * FROM t_doc WHERE username = #{username}
+  </select>
+  
+  <update id="updateIsshare">
+    update t_doc set isshare=#{0} where id = #{1}
+  </update>
+  <select id="findAll" resultType="doc" >
+     SELECT * FROM t_doc where isshare=1;
+  </select>
+  <update id="deleteById" parameterType="int">
+    delete from t_doc where id=#{id}
+  </update>
+</mapper>
